@@ -6,24 +6,17 @@
       :modules="modules"
       :pagination="{ clickable: true }"
       class="swiper-container"
-      @slideChange="onSlideChange"
     >
-      <swiper-slide>
-        <video id="v0" autoplay muted loop src="@/assets/videos/coder.mp4" />
-      </swiper-slide>
-      <swiper-slide>
-        <video id="v1" autoplay muted loop src="@/assets/videos/musician.mp4" />
-      </swiper-slide>
-      <swiper-slide>
+      <swiper-slide v-for="(item, index) in videoList" :key="index">
         <video
-          id="v2"
+          :id="'v' + index"
           autoplay
           muted
           loop
-          src="@/assets/videos/photographer.mp4"
+          preload="auto"
+          :src="item"
         />
       </swiper-slide>
-      ...
     </swiper>
     <div class="AnotherMe">Another Me，开启多维世界</div>
   </div>
@@ -37,6 +30,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
+import coder from "@/assets/videos/coder.mp4";
+import musician from "@/assets/videos/musician.mp4";
+import photographer from "@/assets/videos/photographer.mp4";
 export default {
   components: {
     Swiper,
@@ -44,15 +40,10 @@ export default {
   },
 
   setup() {
-    const onSlideChange = (s: any) => {
-      console.log(s.activeIndex);
-      const id = "v" + s.activeIndex;
-      const oV = document.getElementById(id);
-      oV!.play();
-      console.log(oV, "====");
-    };
+    const videoList = reactive([coder, musician, photographer]);
+
     return {
-      onSlideChange,
+      videoList,
       modules: [Navigation, Pagination, Autoplay],
     };
   },
@@ -60,6 +51,7 @@ export default {
 </script>
 <style scoped lang="scss">
 .swiperCon {
+  width: 100%;
   position: relative;
   height: calc(100vh - 80px);
   .swiper-container {
@@ -72,19 +64,19 @@ export default {
       }
     }
     :deep(.swiper-pagination) {
-      bottom: 80px !important;
+      bottom: 5rem;
       display: flex;
       justify-content: center;
       align-items: center;
     }
     :deep(.swiper-pagination-bullet) {
-      width: 12px;
-      height: 12px;
+      width: 0.75rem;
+      height: 0.75rem;
       border: 1px solid #fff;
     }
     :deep(.swiper-pagination-bullet-active) {
-      width: 13px;
-      height: 13px;
+      width: 0.81rem;
+      height: 0.81rem;
       background-color: #fff;
     }
 
@@ -96,7 +88,7 @@ export default {
     top: 50%;
     transform: translateY(-50%);
     z-index: 99;
-    font-size: 72px;
+    font-size: 4.5rem;
     color: #fff;
     text-align: center;
     user-select: none;
