@@ -1,11 +1,15 @@
 <template>
-  <header>
+  <section class="wrapper">
     <h1>gencontents</h1>
-  </header>
+  </section>
 </template>
 <script lang="ts" setup>
 
 </script>
-<style scoped>
-
+<style lang="scss" scoped>
+.wrapper {
+  height: 100vh;
+  width: 100%;
+  background-color: khaki;
+}
 </style>
