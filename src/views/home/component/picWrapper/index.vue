@@ -26,8 +26,6 @@ import { reactive } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
-import "swiper/css";
-import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import coder from "@/assets/videos/coder.mp4";
@@ -44,7 +42,7 @@ export default {
 
     return {
       videoList,
-      modules: [Navigation, Pagination, Autoplay],
+      modules: [Pagination, Autoplay],
     };
   },
 };
