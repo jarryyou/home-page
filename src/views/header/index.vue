@@ -1,8 +1,8 @@
 <template>
   <header class="header">
     <div class="logo">
-      <img class="logo-main" src="@/assets/images/logo.png" width="36" height="30" alt="logo" />
-      <img class="another-me" src="@/assets/images/Another_Me.png" width="130" height="20" alt="Another_Me">
+      <img class="logo-main" src="@/assets/images/logo.png" width="60px" height="48px" alt="logo" />
+      <img class="another-me" src="@/assets/images/Another_Me.png" width="192px" height="30px" alt="Another_Me">
     </div>
     <ul class="links">
       <li
@@ -47,12 +47,13 @@ const go = (o: LinkItem) => {
   align-items: center;
   
   .logo {
-    margin-left: 15px;
+    margin-left: 30px;
     display: flex;
+    flex-shrink: 0;
     align-items: center;
     height: 50px;
     .another-me {
-      margin-left: 10px;
+      margin-left: 12px;
     }
   }
   
@@ -61,14 +62,16 @@ const go = (o: LinkItem) => {
     display: flex;
     
     .link-item {
+      width: 86px;
       padding: 2px 25px;
-      height: 36px;
+      height: 40px;
       background-color: #ffffff;
-      border-radius: 20px;
-      margin: 0 20px;
+      border-radius: 22px;
+      margin: 0 30px;
       color: black;
       display: flex;
       align-items: center;
+      justify-content: center;
       cursor: pointer;
     }
     
