@@ -35,15 +35,15 @@ export default {
   },
 
   setup() {
-    const onSwiper = (swiper) => {
+    const onSwiper = (swiper: any) => {
      console.log(swiper,'1234');
      
     };
-    const onSlideChange = (s) => {
+    const onSlideChange = (s:any) => {
       console.log(s.activeIndex);
       const id = "v" + s.activeIndex;
       const oV = document.getElementById(id);
-      oV.play();
+      oV!.play();
     };
     return {
       onSwiper,
@@ -55,7 +55,13 @@ export default {
 </script>
 <style scoped lang="scss">
 .swiper-container {
-  height: 900px;
+  height: 100vh;
   width: 100%;
+  .swiper-slide{
+    height: 100%;
+    video{
+      height: 100%;
+    }
+  }
 }
 </style>
