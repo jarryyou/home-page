@@ -1,15 +1,15 @@
 <template>
-  <section class="wrapper">
-    <h1>property-wrapper</h1>
-  </section>
+  <div class="view-container download-wrapper">
+    download
+  </div>
 </template>
 <script lang="ts" setup>
 
 </script>
 <style lang="scss" scoped>
-.wrapper {
+.download-wrapper {
   height: 100vh;
   width: 100%;
-  background-color: thistle;
+  background-color: lightseagreen;
 }
 </style>

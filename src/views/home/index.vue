@@ -1,19 +1,18 @@
 <template>
-  <Header></Header>
-  <PicWraper></PicWraper>
-  <GenContents></GenContents>
-  <Properties></Properties>
-  <Creators></Creators>
-  <Footer></Footer>
+  <div class="view-container home-container">
+    <PicWraper></PicWraper>
+    <Properties></Properties>
+    <GenContents></GenContents>
+    <Creators></Creators>
+    <About></About>
+  </div>
 </template>
 <script lang="ts" setup>
-import Header from './component/header/index.vue'
 import PicWraper from './component/picWrapper/index.vue'
 import GenContents from './component/genContents/index.vue'
 import Properties from './component/properties/index.vue'
 import Creators from './component/creators/index.vue'
-import Footer from './component/footer/index.vue'
+import About from './component/about/index.vue'
 </script>
-<style scoped>
-
+<style lang="scss" scoped>
 </style>
