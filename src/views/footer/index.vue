@@ -10,7 +10,7 @@
 </script>
 <style lang="scss" scoped>
 .footer {
-  height: 120px;
+  height: 7.5em;
   width: 100%;
   background-color: #000000;
   display: flex;
@@ -21,7 +21,7 @@
   
   .copyright {
     color: #ffffff;
-    font-size: 16px;
+    font-size: 1em;
     font-weight: 400;
   }
 }

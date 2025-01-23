@@ -1,6 +1,6 @@
 <template>
   <section class="about-wrapper">
-    <img class="about-logo" src="@/assets/images/about-logo.png" width="270" height="92" alt="logo">
+    <img class="about-logo" src="@/assets/images/about-logo.png" alt="logo">
     <div class="qr-code">
       <div class="qr-code-img">
       
@@ -16,30 +16,33 @@
 </script>
 <style lang="scss" scoped>
 .about-wrapper {
-  height: 300px;
+  height: 18.75em;
   width: 100%;
   background-color: #000000;
   color: white;
   display: flex;
   align-items: center;
   .about-logo {
-    margin-left: 200px;
+    margin-left: 25em;
+    width: 25.38em;
+    height: 8.38em;
   }
   
   .qr-code {
-    width: 150px;
-    height: 170px;
+    width: 9.38em;
+    height: 10.33em;
     margin-left: auto;
-    margin-right: 200px;
+    margin-right: 25em;
     .qr-code-img {
-      width: 150px;
-      height: 150px;
+      width: 9.38em;
+      height: 9.38em;
       background-color: #ffffff;
+      margin-bottom: 0.75em;
     }
     .qr-code-text {
       width: 100%;
       text-align: center;
-      font-size:  14px;
+      font-size: 0.88em;
       color: #ffffff;
     }
   }

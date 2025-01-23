@@ -1,8 +1,8 @@
 <template>
   <header class="header">
     <div class="logo">
-      <img class="logo-main" src="@/assets/images/logo.png" width="60px" height="48px" alt="logo" />
-      <img class="another-me" src="@/assets/images/Another_Me.png" width="192px" height="30px" alt="Another_Me">
+      <img class="logo-main" src="@/assets/images/logo.png" alt="logo" />
+      <img class="another-me" src="@/assets/images/Another_Me.png" alt="Another_Me">
     </div>
     <ul class="links">
       <li
@@ -42,19 +42,25 @@ const go = (o: LinkItem) => {
   left: 0;
   z-index: 9999;
   position: fixed;
-  height: 80px;
+  height: 5em;
   background-color: #ffffff;
   display: flex;
   align-items: center;
   
   .logo {
-    margin-left: 30px;
+    margin-left: 1.94em;
     display: flex;
     flex-shrink: 0;
     align-items: center;
-    height: 50px;
+    height: 100%;
+    .logo-main {
+      width: 3.69em;
+      height: 3em;
+    }
     .another-me {
-      margin-left: 12px;
+      margin-left: 0.75em;
+      width: 12em;
+      height: 2em;
     }
   }
   
@@ -63,12 +69,12 @@ const go = (o: LinkItem) => {
     display: flex;
     
     .link-item {
-      width: 86px;
-      padding: 2px 25px;
-      height: 40px;
+      width: 5.38em;
+      height: 1.25em;
+      padding: 0.75em 1.56em;
       background-color: #ffffff;
-      border-radius: 22px;
-      margin: 0 30px;
+      border-radius: 1.38em;
+      margin: 0 1.88em;
       color: black;
       display: flex;
       align-items: center;
