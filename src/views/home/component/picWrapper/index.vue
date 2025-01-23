@@ -20,7 +20,7 @@
     ...
   </swiper>
 </template>
-<script>
+<script lang="ts">
 import { reactive } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Navigation, Pagination } from "swiper/modules";

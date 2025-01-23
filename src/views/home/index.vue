@@ -15,4 +15,7 @@ import Creators from './component/creators/index.vue'
 import About from './component/about/index.vue'
 </script>
 <style lang="scss" scoped>
+.view-container {
+  margin-top: 80px;
+}
 </style>

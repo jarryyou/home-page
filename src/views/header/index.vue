@@ -40,6 +40,7 @@ const go = (o: LinkItem) => {
   width: 100%;
   top: 0;
   left: 0;
+  z-index: 9999;
   position: fixed;
   height: 80px;
   background-color: #ffffff;
