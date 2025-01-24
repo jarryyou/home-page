@@ -2,20 +2,14 @@
   <div class="swiperCon">
     <swiper
       loop
-      :autoplay="{ delay: 5000, disableOnInteraction: false }"
+      effect="fade"
       :modules="modules"
       :pagination="{ clickable: true }"
-      class="swiper-container"
+      class="swiper-container swiper-no-swiping"
+      :autoplay="{ delay: 5000, disableOnInteraction: false }"
     >
       <swiper-slide v-for="(item, index) in videoList" :key="index">
-        <video
-          :id="'v' + index"
-          autoplay
-          muted
-          loop
-          preload="auto"
-          :src="item"
-        />
+        <video autoplay muted loop preload="auto" :src="item" />
       </swiper-slide>
     </swiper>
     <div class="AnotherMe">Another Me，开启多维世界</div>
@@ -24,7 +18,7 @@
 <script lang="ts">
 import { reactive } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Autoplay, EffectFade, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
@@ -42,7 +36,7 @@ export default {
 
     return {
       videoList,
-      modules: [Pagination, Autoplay],
+      modules: [Pagination, Autoplay, EffectFade],
     };
   },
 };
@@ -51,7 +45,7 @@ export default {
 .swiperCon {
   width: 100%;
   position: relative;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 5rem);
   .swiper-container {
     height: 100%;
     width: 100%;

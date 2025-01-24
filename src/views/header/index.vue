@@ -2,14 +2,18 @@
   <header class="header">
     <div class="logo">
       <img class="logo-main" src="@/assets/images/logo.png" alt="logo" />
-      <img class="another-me" src="@/assets/images/Another_Me.png" alt="Another_Me">
+      <img
+        class="another-me"
+        src="@/assets/images/Another_Me.png"
+        alt="Another_Me"
+      />
     </div>
     <ul class="links">
       <li
-          :class="['link-item', currentLink === o.path ? 'active-link' : '']"
-          v-for="(o, i) in linkLists"
-          :key="i"
-          @click="() => go(o)"
+        :class="['link-item', currentLink === o.path ? 'active-link' : '']"
+        v-for="(o, i) in linkLists"
+        :key="i"
+        @click="() => go(o)"
       >
         {{ o.name }}
       </li>
@@ -19,21 +23,21 @@
 <script lang="ts" setup>
 import { computed } from "vue";
 import { useRoute, useRouter } from "vue-router";
-import type {LinkItem} from "@/views/header/header.ts";
+import type { LinkItem } from "@/views/header/header.ts";
 
-const router = useRouter()
-const route = useRoute()
+const router = useRouter();
+const route = useRoute();
 const currentLink = computed(() => {
-  return route.path
-})
+  return route.path;
+});
 const linkLists: LinkItem[] = [
-  { name: '平台介绍', path: '/home', value: 'home' },
-  { name: '下载APP', path: '/download', value: 'download' }
-]
+  { name: "平台介绍", path: "/home", value: "home" },
+  { name: "下载APP", path: "/download", value: "download" },
+];
 
 const go = (o: LinkItem) => {
-  router.push(o.path)
-}
+  router.push(o.path);
+};
 </script>
 <style lang="scss" scoped>
 .header {
@@ -42,11 +46,11 @@ const go = (o: LinkItem) => {
   left: 0;
   z-index: 9999;
   position: fixed;
-  height: 5em;
+  height: 5rem;
   background-color: #ffffff;
   display: flex;
   align-items: center;
-  
+
   .logo {
     margin-left: 1.94em;
     display: flex;
@@ -63,11 +67,11 @@ const go = (o: LinkItem) => {
       height: 2em;
     }
   }
-  
+
   .links {
     margin-left: auto;
     display: flex;
-    
+
     .link-item {
       width: 5.38em;
       height: 1.25em;
@@ -81,7 +85,7 @@ const go = (o: LinkItem) => {
       justify-content: center;
       cursor: pointer;
     }
-    
+
     .active-link {
       background-color: black;
       color: #ffffff;
