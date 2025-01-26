@@ -5,8 +5,8 @@
       effect="fade"
       :modules="modules"
       :pagination="{ clickable: true }"
-      class="swiper-container swiper-no-swiping"
       :autoplay="{ delay: 5000, disableOnInteraction: false }"
+      class="swiper-container swiper-no-swiping"
     >
       <swiper-slide v-for="(item, index) in videoList" :key="index">
         <video autoplay muted loop preload="auto" :src="item" />
@@ -22,6 +22,7 @@ import { Autoplay, EffectFade, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
+import "swiper/css/effect-fade";
 import coder from "@/assets/videos/coder.mp4";
 import musician from "@/assets/videos/musician.mp4";
 import photographer from "@/assets/videos/photographer.mp4";
